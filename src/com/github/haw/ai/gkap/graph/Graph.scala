@@ -6,6 +6,7 @@ trait Graph[V, E] {
   def isIncident(v : Vertex[V], e : Edge[E, V]) : Boolean
   def adjacent(v : Vertex[V]) : Set[Vertex[V]]
   def incident(v : Vertex[V]) : Set[Edge[E, V]]
+  def toString : String
 }
 
 object Graph {

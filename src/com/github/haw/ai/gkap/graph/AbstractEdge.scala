@@ -8,4 +8,9 @@ abstract case class AbstractEdge[E, V](left : Vertex[V], right : Vertex[V], cont
     case `right` => Some(left)
     case _       => None
   }
+  
+  override def toString : String =
+    "E(" + content + ", " + verticesString + ")"
+  
+  def verticesString : String
 }

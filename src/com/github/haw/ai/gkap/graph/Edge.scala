@@ -10,6 +10,7 @@ trait Edge[E, V] {
   def otherVertex(v : Vertex[V]) : Option[Vertex[V]]
   def isReachable(from : Vertex[V], to : Vertex[V]) : Boolean
   def isDirected : Boolean
+  def toString : String
 }
 
 

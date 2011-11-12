@@ -15,4 +15,7 @@ case class GraphImpl[V, E](vertices : Set[Vertex[V]], edges : Set[Edge[E, V]]) e
   
   def incident(v : Vertex[V]) : Set[Edge[E, V]] =
     edges.filter(isIncident(v, _))
+  
+  override def toString : String =
+    "G({" + vertices.mkString(", ") + "}, {" + edges.mkString(", ") + "})"
 }

@@ -6,6 +6,8 @@ final class DirectedEdge[E, V](left : Vertex[V], right : Vertex[V], content : E)
   def isReachable(from : Vertex[V], to : Vertex[V]) : Boolean =
     from == left && to == right
     
+  def verticesString : String = "(" + left + ", " + right + ")"
+    
   override def equals(o : Any) : Boolean = o match {
     case that : AnyRef if this eq that => true
     case DirectedEdge(l, r, c) => l == left && r == right && c == content

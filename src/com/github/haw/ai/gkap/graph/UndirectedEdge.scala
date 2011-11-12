@@ -9,6 +9,8 @@ final class UndirectedEdge[E, V](left : Vertex[V], right : Vertex[V], content : 
   def isReachable(from : Vertex[V], to : Vertex[V]) : Boolean =
     vertices.contains(from) && vertices.contains(to)
     
+  def verticesString : String = "{" + left + ", " + right + "}"
+    
   override def equals(o : Any) : Boolean = o match {
     case that : AnyRef if this eq that => true
     case UndirectedEdge(vs, c) => vs == vertices && c == content
