@@ -1,6 +1,8 @@
 package com.github.haw.ai.gkap.graph
 
 trait Graph[V, E] {
+  def vertices : Set[Vertex[V]]
+  def edges : Set[Edge[E, V]]
   def degree(v : Vertex[V]) : Int
   def isAdjacent(v : Vertex[V], w : Vertex[V]) : Boolean
   def isIncident(v : Vertex[V], e : Edge[E, V]) : Boolean

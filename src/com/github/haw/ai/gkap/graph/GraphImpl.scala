@@ -1,6 +1,6 @@
 package com.github.haw.ai.gkap.graph
 
-case class GraphImpl[V, E](vertices : Set[Vertex[V]], edges : Set[Edge[E, V]]) extends Graph[V, E] {
+case class GraphImpl[V, E](override val vertices : Set[Vertex[V]], override val edges : Set[Edge[E, V]]) extends Graph[V, E] {
   def degree(v : Vertex[V]) : Int =
     edges.filter(_.vertices.contains(v)).size
    
